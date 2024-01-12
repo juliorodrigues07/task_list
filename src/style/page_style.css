@@ -124,13 +124,25 @@ th
     font-size: 17px;
     border-radius: 15px;
     height: auto;
-    /* text-align: center; */
 }
 
 .day-tasks li,
 .night-tasks li
 {
-    padding: 10px;    
+    margin-top: 10px;
+    /* padding: 10px; */
+}
+
+.button-cont
+{
+    justify-content: center;
+    display: flex;
+}
+
+.button-cont button
+{
+    margin: 5px;
+    padding: 10px;
 }
 
 .day-tasks
@@ -177,11 +189,11 @@ select
     border-radius: 5px;
 }
 
-.data-inputs input
+/* .data-inputs input
 {
     display: flex;
     flex-direction: row;
-}
+} */
 
 .data-inputs input,
 .data-inputs select,
@@ -207,6 +219,56 @@ select:hover
     cursor: pointer;
 }
 
+.fa-check-circle,
+.fa-exclamation-circle
+{
+    visibility: hidden;
+}
+
+small
+{
+    padding: 10px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+    visibility: hidden;
+}
+
+.form-control.success
+{
+	border-color: #73ff00;
+}
+
+.form-control.error
+{
+	border-color: #ff0000;
+}
+
+.form-control.success i.fa-check-circle 
+{
+    color: #73ff00;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle 
+{
+    color: #ff0000;
+    visibility: visible;
+}
+
+.form-control.success small 
+{
+    color: #00ff22;
+    visibility: visible;
+}
+
+.form-control.error small 
+{
+    color: #ff0000;
+    visibility: visible;
+}
+
 /* CRUD Buttons */
 #add-task,
 #edit-day,
@@ -215,7 +277,7 @@ select:hover
 #delete-night
 {
     border: transparent;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
 #add-task:hover,
@@ -240,25 +302,25 @@ select:hover
 #edit-day,
 #edit-night
 {
-    background-color: #474747;
+    background-color: #c4c4c4;
 }
 
 #edit-day:hover,
 #edit-night:hover
 {
-    background-color: #161616;
+    background-color: #6d6d6d;
 }
 
 #delete-day,
 #delete-night
 {
-    background-color: #f12424;
+    background-color: #f03a3a;
 }
 
 #delete-day:hover,
 #delete-night:hover
 {
-    background-color: #c00101;
+    background-color: #d31f1f;
 }
 
 /* FontAwesome Icons */
