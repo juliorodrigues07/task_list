@@ -1,3 +1,4 @@
+/* General */
 body
 {
     max-width: 1200px;
@@ -12,13 +13,15 @@ main
    flex-direction: row;
 }
 
+/* Profile area */
 .profile-menu
 {
     padding: 20px;
-    background-color: aqua;
+    background-color: #58fdf5;
     text-align: center;
     height: auto;
     width: 350px; 
+    border-radius: 10px;
 }
 
 img
@@ -34,27 +37,38 @@ img
 {
     margin-top: 15px;
     font-size: 17px;
-    text-align: center;
-}
-
-.navigation-menu
-{
-    margin-top: 30px;
-    background-color: blueviolet;
+    text-align: justify;
 }
 
 
 .navigation-menu li 
 {
+    text-align: center;
     padding: 10px;
-    /* text-align: center; */
     list-style: none;
 }
 
 .navigation-menu a
 {
+    display: block;
+    padding: 5px;
     font-size: 15px;
-    color: rgb(0, 153, 255);
+    border: solid 2px #000000;
+    border-radius: 5px;
+    color: rgb(0, 110, 255);
+    background-color: rgb(255, 255, 255);
+}
+
+a
+{
+    text-decoration: none;
+}
+
+img:hover, a:hover
+{
+    cursor: pointer;
+    border-color: rgb(0, 110, 255);
+    background-color: #e4e4e4;
 }
 
 ul
@@ -62,18 +76,19 @@ ul
     padding: 0;
 }
 
+/* Tasks table */
 .main-table
 {
-    margin-left: 50px;
+    margin-left: 30px;
     width: 850px;
-    background-color: #dfdfdf;
+    background-color: #58fdf5;
+    border-radius: 10px;
 }
 
 .main-title
 {
     font-size: 20px;
     text-align: center;
-    background-color: #dfdfdf;
 }
 
 .task-table
@@ -82,7 +97,6 @@ ul
     display: flex;
     flex-direction: row;
     height: auto;
-    background-color: #dfdfdf;
 }
 
 .category
@@ -90,7 +104,6 @@ ul
     font-family: "Times New Roman", Times, serif;
     font-size: 25px;
     text-align: center;
-    background-color: #f0f0f0;
 }
 
 .day-tasks,
@@ -98,12 +111,180 @@ ul
     padding: 10px;
     margin-right: 20px;
     font-size: 17px;
+    border-radius: 15px;
     height: auto;
+}
+
+.day-tasks
+{
+    background-color: #ffffff;
+    color: #000000;
     border: solid 2px #000000;
+}
+
+.night-tasks
+{
+    background-color: #000000;
+    color: #f0f0f0;
+    border: solid 2px #f0f0f0;
+}
+
+/* .day-tasks:hover
+{
+    background-color: #e4e4e4;
+}
+
+.night-tasks:hover
+{
+    background-color: #2e2e2e;
+} */
+
+/* Input fields */
+.data-inputs {
+    text-align: center;
+}
+
+.data-inputs input
+{
+    width: 80%;
+}
+
+.data-inputs input,
+.data-inputs button {
+    margin: 5px; 
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+input
+{
+    border: solid 2px #000000;
+    border-radius: 2px;
+}
+
+input:hover
+{
     background-color: #f0f0f0;
+}
+
+/* CRUD Buttons */
+#add-day,
+#add-night,
+#edit-day,
+#edit-night,
+#delete-day,
+#delete-night
+{
+    border: transparent;
+    border-radius: 2px;
+}
+
+#add-day:hover,
+#add-night:hover,
+#edit-day:hover,
+#edit-night:hover,
+#delete-day:hover,
+#delete-night:hover
+{
+    cursor: pointer;
+}
+
+#add-day,
+#add-night
+{
+    background-color: #15ff00;
+}
+
+#add-day:hover,
+#add-night:hover
+{
+    background-color: #0fac01;
+}
+
+#edit-day,
+#edit-night
+{
+    background-color: #474747;
+}
+
+#edit-day:hover,
+#edit-night:hover
+{
+    background-color: #161616;
+}
+
+#delete-day,
+#delete-night
+{
+    background-color: #f12424;
+}
+
+#delete-day:hover,
+#delete-night:hover
+{
+    background-color: #c00101;
 }
 
 ol
 {
     margin-right: 20px;
+}
+
+/* FontAwesome Icons */
+.fa-sun
+{
+    color: #ffd000;
+}
+
+.fa-moon,
+.fa-plus
+{
+    color: #ffffff;
+}
+
+.fa-trash,
+.fa-pen-to-square
+{
+    color: #000000;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 900px){
+
+    main 
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-table
+    {
+        margin: auto;
+        margin-top: 20px;
+        width: auto;
+    }
+
+    .profile-menu, 
+    .main-table
+    {
+        width: 90%;
+    }
+
+    ul
+    {
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .task-table
+    {
+        flex-direction: column;
+    }
+
+    .day-tasks,
+    .night-tasks
+    {
+        margin: 15px 15px 0px 0px;
+    }
 }
