@@ -33,11 +33,16 @@ img
     background-color: #ffffff;
 }
 
+figure
+{
+    border-bottom: solid 3px #000000;
+}
+
 .resume
 {
     margin-top: 15px;
     font-size: 17px;
-    text-align: justify;
+    text-align: center;
 }
 
 
@@ -99,20 +104,33 @@ ul
     height: auto;
 }
 
-.category
+table
 {
+    margin: 0 auto;
+}
+
+th
+{
+    padding: 10px;
     font-family: "Times New Roman", Times, serif;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
 }
 
 .day-tasks,
 .night-tasks{
-    padding: 10px;
+    padding: 5px;
     margin-right: 20px;
     font-size: 17px;
     border-radius: 15px;
     height: auto;
+    /* text-align: center; */
+}
+
+.day-tasks li,
+.night-tasks li
+{
+    padding: 10px;    
 }
 
 .day-tasks
@@ -129,47 +147,68 @@ ul
     border: solid 2px #f0f0f0;
 }
 
-/* .day-tasks:hover
+ol
 {
-    background-color: #e4e4e4;
+    margin-right: 20px;
 }
-
-.night-tasks:hover
-{
-    background-color: #2e2e2e;
-} */
 
 /* Input fields */
 .data-inputs {
+    padding: 15px;
     text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="text"]
+{
+    padding: 10px;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+select
+{
+    background-color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    border: solid 2px #000000;
+    border-radius: 5px;
 }
 
 .data-inputs input
 {
-    width: 80%;
+    display: flex;
+    flex-direction: row;
 }
 
 .data-inputs input,
+.data-inputs select,
 .data-inputs button {
-    margin: 5px; 
+    margin: 10px; 
     padding: 10px;
-    box-sizing: border-box;
 }
 
 input
 {
     border: solid 2px #000000;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
-input:hover
+input:hover,
+select:hover
 {
     background-color: #f0f0f0;
 }
 
+select:hover
+{
+    cursor: pointer;
+}
+
 /* CRUD Buttons */
-#add-day,
-#add-night,
+#add-task,
 #edit-day,
 #edit-night,
 #delete-day,
@@ -179,8 +218,7 @@ input:hover
     border-radius: 2px;
 }
 
-#add-day:hover,
-#add-night:hover,
+#add-task:hover,
 #edit-day:hover,
 #edit-night:hover,
 #delete-day:hover,
@@ -189,14 +227,12 @@ input:hover
     cursor: pointer;
 }
 
-#add-day,
-#add-night
+#add-task
 {
     background-color: #15ff00;
 }
 
-#add-day:hover,
-#add-night:hover
+#add-task:hover
 {
     background-color: #0fac01;
 }
@@ -223,11 +259,6 @@ input:hover
 #delete-night:hover
 {
     background-color: #c00101;
-}
-
-ol
-{
-    margin-right: 20px;
 }
 
 /* FontAwesome Icons */

@@ -2,135 +2,135 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="../public/assets/todo.svg">
+	<link rel="icon" href="../public/assets/todo.svg">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../src/style/page_style.css">
-    <title>Task List</title>
+	<link rel="stylesheet" href="../src/style/page_style.css">
+	<title>Task List</title>
 </head>
 
 <body>
-    <main>
+	<main>
 
-        <div class="profile-menu">
+		<div class="profile-menu">
 
-            <figure>
-                <img src="../public/assets/avatar.png" alt="Imagem do Perfil">
-                <h1>Marie Floyd</h1>
-            </figure>
+			<figure>
+				<img src="../public/assets/avatar.png" alt="Imagem do Perfil">
+				<h1>Marie Floyd</h1>
+			</figure>
 
-            <div class="resume">
-                <p>
-                    Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been 
-                    the industry's standard dummy text since ever the 1500s, when an unknown printer took a gallery 
-                    of type and scrambled it to make a type specimen book.
-                </p>
-            </div>
+			<div class="resume">
+				<p>
+				Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been 
+				the industry's standard dummy text since ever the 1500s, when an unknown printer took a gallery 
+				of type and scrambled it to make a type specimen book.
+				</p>
+			</div>
 
-            <div class="navigation-menu">
+			<div class="navigation-menu">
 
 				<!-- Bullet points list -->
 				<ul>
-                    <li><a href=”#”>LinkedIn <i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href=”#”>Github <i class="fa-brands fa-github"></i></a></li>
-                    <li><a href=”#”>Instagram <i class="fa-brands fa-square-instagram"></i></a></li>
-                    <li><a href=”#”>Pinterest <i class="fa-brands fa-pinterest"></i></a></li>
-                </ul>
+					<li><a href=”#”>LinkedIn <i class="fa-brands fa-linkedin"></i></a></li>
+					<li><a href=”#”>Github <i class="fa-brands fa-github"></i></a></li>
+					<li><a href=”#”>Instagram <i class="fa-brands fa-square-instagram"></i></a></li>
+					<li><a href=”#”>Pinterest <i class="fa-brands fa-pinterest"></i></a></li>
+				</ul>
 
-            </div>    
+			</div>    
 
-        </div>
+		</div>
 
 
-        <div class="main-table">
+		<div class="main-table">
 
-            <div class="main-title">
-                <h1>Lista de Tarefas</h1>
-            </div>
-        
-        	<div class="task-table">
-            
+			<div class="main-title">
+				<h1>Lista de Tarefas</h1>
+			</div>
+
+			<div class="task-table">
+
 				<div class="day-tasks">
 
-					<section>
-						<div class="category">
-							<h3>
+					<table>
+
+						<tr>
+							<th>
 								Dia <i class="fa-solid fa-sun"></i>
-							</h3>
-						</div>
+							</th>
+						</tr>
 
-						<!-- Ordered list -->
-						<ol>
-							<li>Lorem ipsum is simply dummy text</li>
-							<li>Lorem ipsum is simply dummy text</li>
-							<li>Lorem ipsum is simply dummy text</li>
-							<li>Lorem ipsum is simply dummy text</li>
-							<li>Lorem ipsum is simply dummy text</li>
-							<li>Lorem ipsum is simply dummy text</li>
-							<li>Lorem ipsum is simply dummy text</li>
-							<li>Lorem ipsum is simply dummy text</li>
-							<li>Lorem ipsum is simply dummy text</li>
-							<li>Lorem ipsum is simply dummy text</li>
-						</ol>
-
-						<div class="data-inputs">
-							<input  type="text"
-								id="new-day-task"
-								placeholder="Adicione uma tarefa..."
-								maxlength="50"
-							>
-							<button id="add-day">
-								<i class="fa-solid fa-plus"></i>
-							</button>
-						</div>
-						
-					</section>
+						<tr>
+							<td>
+								<!-- Ordered list -->
+								<ol>
+									<li>Lorem ipsum is simply dummy text</li>
+									<li>Lorem ipsum is simply dummy text</li>
+									<li>Lorem ipsum is simply dummy text</li>
+									<li>Lorem ipsum is simply dummy text</li>
+									<li>Lorem ipsum is simply dummy text</li>
+									<li>Lorem ipsum is simply dummy text</li>
+									<li>Lorem ipsum is simply dummy text</li>
+								</ol>
+							</td>
+						</tr>
+					</table>
 
 				</div>
 
 				<div class="night-tasks">
 					
-					<section>
-						<div class="category">
-							<h3>
+					
+					<table>
+
+						<tr>
+							<th>
 								Noite <i class="fa-solid fa-moon"></i>
-							</h3>
-						</div>
+							</th>
+						</tr>
 
-						<ol>
-							<li>Lorem ipsum is simply dummy text</li>
-							<li>Lorem ipsum is simply dummy text</li>
-							<li>Lorem ipsum is simply dummy text</li>
-							<li>Lorem ipsum is simply dummy text</li>
-							<li>Lorem ipsum is simply dummy text</li>
-							<li>Lorem ipsum is simply dummy text</li>
-							<li>Lorem ipsum is simply dummy text</li>
-							<li>Lorem ipsum is simply dummy text</li>
-							<li>Lorem ipsum is simply dummy text</li>
-							<li>Lorem ipsum is simply dummy text</li>
-						</ol>
-
-						<div class="data-inputs">
-							<input  type="text"
-							id="new-night-task"
-							placeholder="Adicione uma tarefa..."
-							maxlength="50"
-							>
-							<button id="add-night">
-								<i class="fa-solid fa-plus"></i>
-							</button>
-						</div>
-
-					</section>
+						<tr>
+							<td>
+								<ol>
+									<li>Lorem ipsum is simply dummy text</li>
+									<li>Lorem ipsum is simply dummy text</li>
+									<li>Lorem ipsum is simply dummy text</li>
+									<li>Lorem ipsum is simply dummy text</li>
+									<li>Lorem ipsum is simply dummy text</li>
+									<li>Lorem ipsum is simply dummy text</li>
+									<li>Lorem ipsum is simply dummy text</li>
+								</ol>
+							</td>
+						</tr>
+						
+					</table>
 
 				</div>
 
-        	</div>
-        </div>
-    </main>
+			</div>
+
+			<div class="data-inputs">
+				<input  type="text"
+								required
+								id="new-task"
+								placeholder="Adicione uma tarefa..."
+								maxlength="50"
+				>
+				<select id="dropdown" name="dropdown">
+					<option value="day">Dia</option>
+					<option value="night">Noite</option>
+				</select>
+
+				<button id="add-task">
+					<i class="fa-solid fa-plus"></i>
+				</button>
+			</div>
+
+		</div>
+	</main>
 </body>
 
 <script src="../src/js/crud.js"></script>
