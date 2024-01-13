@@ -15,7 +15,7 @@ let dummyTasks =
 let tasks = dummyTasks;
 const localTasks = JSON.parse(localStorage.getItem('tasks'));
 
-if (JSON.parse(localStorage.getItem('tasks')).length != 0)
+if (localStorage.getItem('tasks') !== null)
 	tasks = localTasks;
 else
 	tasks = dummyTasks;
