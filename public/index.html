@@ -23,9 +23,7 @@
 
 			<div class="resume">
 				<p>
-				Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been 
-				the industry's standard dummy text since ever the 1500s, when an unknown printer took a gallery 
-				of type and scrambled it to make a type specimen book.
+				Estudante de Medicina Veterinária, apaixonada por calopsitas.
 				</p>
 			</div>
 
@@ -61,22 +59,53 @@
 								<!-- Ordered list -->
 								<ol>
 									<li>
-										Lorem ipsum is simply dummy text
+										Andar de bike
+										<input type="checkbox" id="done" name="done" checked/>
 										<div class="button-cont">
-											<button id="edit-day" onclick="editTask()">
+											<button class="edit-day" onclick="editTask(event)">
 												<i class="fa-solid fa-pen-to-square"></i>
 											</button>
-											<button id="delete-day" onclick="deleteTask()">
+											<button class="delete-day" onclick="deleteTask(event)">
 												<i class="fa-solid fa-trash"></i>
 											</button>			
 										</div>
 									</li>
-									<li>Lorem ipsum is simply dummy text</li>
-									<li>Lorem ipsum is simply dummy text</li>
-									<li>Lorem ipsum is simply dummy text</li>
-									<li>Lorem ipsum is simply dummy text</li>
-									<li>Lorem ipsum is simply dummy text</li>
-									<li>Lorem ipsum is simply dummy text</li>
+									<li>
+										Pesquisar preços de PC
+										<input type="checkbox" id="done" name="done" checked/>
+										<div class="button-cont">
+											<button class="edit-day" onclick="editTask(event)">
+												<i class="fa-solid fa-pen-to-square"></i>
+											</button>
+											<button class="delete-day" onclick="deleteTask(event)">
+												<i class="fa-solid fa-trash"></i>
+											</button>			
+										</div>
+									</li>
+									<li>
+										Estudar para a prova
+										<input type="checkbox" id="done" name="done" checked/>
+										<div class="button-cont">
+											<button class="edit-day" onclick="editTask(event)">
+												<i class="fa-solid fa-pen-to-square"></i>
+											</button>
+											<button class="delete-day" onclick="deleteTask(event)">
+												<i class="fa-solid fa-trash"></i>
+											</button>			
+										</div>
+									</li>
+									<li>
+										Lorem ipsum is simply dummy text
+										<input type="checkbox" id="done" name="done"/>
+										<div class="button-cont">
+											<button class="edit-day" onclick="editTask(event)">
+												<i class="fa-solid fa-pen-to-square"></i>
+											</button>
+											<button class="delete-day" onclick="deleteTask(event)">
+												<i class="fa-solid fa-trash"></i>
+											</button>			
+										</div>
+									</li>
 								</ol>
 							</td>
 						</tr>
@@ -94,22 +123,53 @@
 							<td>
 								<ol>
 									<li>
-										Lorem ipsum is simply dummy text
+										Estudar inglês
+										<input type="checkbox" id="done" name="done"/>
 										<div class="button-cont">
-											<button id="edit-day" onclick="editTask()">
+											<button class="edit-night" onclick="editTask(event)">
 												<i class="fa-solid fa-pen-to-square"></i>
 											</button>
-											<button id="delete-day" onclick="deleteTask()">
+											<button class="delete-night" onclick="deleteTask(event)">
 												<i class="fa-solid fa-trash"></i>
 											</button>			
 										</div>
 									</li>
-									<li>Lorem ipsum is simply dummy text</li>
-									<li>Lorem ipsum is simply dummy text</li>
-									<li>Lorem ipsum is simply dummy text</li>
-									<li>Lorem ipsum is simply dummy text</li>
-									<li>Lorem ipsum is simply dummy text</li>
-									<li>Lorem ipsum is simply dummy text</li>
+									<li>
+										Verificar emails
+										<input type="checkbox" id="done" name="done" checked/>
+										<div class="button-cont">
+											<button class="edit-night" onclick="editTask(event)">
+												<i class="fa-solid fa-pen-to-square"></i>
+											</button>
+											<button class="delete-night" onclick="deleteTask(event)">
+												<i class="fa-solid fa-trash"></i>
+											</button>			
+										</div>
+									</li>
+									<li>
+										Continuar a ler o livro
+										<input type="checkbox" id="done" name="done"/>
+										<div class="button-cont">
+											<button class="edit-night" onclick="editTask(event)">
+												<i class="fa-solid fa-pen-to-square"></i>
+											</button>
+											<button class="delete-night" onclick="deleteTask(event)">
+												<i class="fa-solid fa-trash"></i>
+											</button>			
+										</div>
+									</li>
+									<li>
+										Lorem ipsum is simply dummy text
+										<input type="checkbox" id="done" name="done"/>
+										<div class="button-cont">
+											<button class="edit-night" onclick="editTask(event)">
+												<i class="fa-solid fa-pen-to-square"></i>
+											</button>
+											<button class="delete-night" onclick="deleteTask(event)">
+												<i class="fa-solid fa-trash"></i>
+											</button>			
+										</div>
+									</li>
 								</ol>
 							</td>
 						</tr>		
@@ -126,8 +186,6 @@
 					placeholder="Adicione uma tarefa..."
 					maxlength="50"
 				>
-				<i class="fas fa-exclamation-circle"></i>
-				<i class="fas fa-check-circle"></i>
 
 				<select id="dropdown" name="dropdown">
 					<option value="day">Dia</option>
@@ -140,7 +198,9 @@
 			</div>
 
 			<div class="form-control">
+				<!-- <i class="fas fa-exclamation-circle"></i> -->
 				<small>Inform a task.</small>
+				<!-- <i class="fas fa-check-circle"></i> -->
 			</div>
 
 		</div>

@@ -173,6 +173,13 @@ ol
     justify-content: center;
 }
 
+input[type='checkbox']
+{
+    cursor: crosshair;
+    width: 20px;
+    height: 20px;
+}
+
 input[type="text"]
 {
     padding: 10px;
@@ -182,18 +189,13 @@ input[type="text"]
 
 select
 {
+    font-size: 15px;
     background-color: #ffffff;
-    padding: 10px;
+    padding: 5px;
     box-sizing: border-box;
     border: solid 2px #000000;
     border-radius: 5px;
 }
-
-/* .data-inputs input
-{
-    display: flex;
-    flex-direction: row;
-} */
 
 .data-inputs input,
 .data-inputs select,
@@ -219,11 +221,11 @@ select:hover
     cursor: pointer;
 }
 
-.fa-check-circle,
+/* .fa-check-circle,
 .fa-exclamation-circle
 {
     visibility: hidden;
-}
+} */
 
 small
 {
@@ -245,17 +247,17 @@ small
 	border-color: #ff0000;
 }
 
-.form-control.success i.fa-check-circle 
+/* .form-control.success .fa-check-circle 
 {
     color: #73ff00;
     visibility: visible;
 }
 
-.form-control.error i.fa-exclamation-circle 
+.form-control.error .fa-exclamation-circle 
 {
     color: #ff0000;
     visibility: visible;
-}
+} */
 
 .form-control.success small 
 {
@@ -271,20 +273,20 @@ small
 
 /* CRUD Buttons */
 #add-task,
-#edit-day,
-#edit-night,
-#delete-day,
-#delete-night
+.edit-day,
+.edit-night,
+.delete-day,
+.delete-night
 {
     border: transparent;
     border-radius: 4px;
 }
 
 #add-task:hover,
-#edit-day:hover,
-#edit-night:hover,
-#delete-day:hover,
-#delete-night:hover
+.edit-day:hover,
+.edit-night:hover,
+.delete-day:hover,
+.delete-night:hover
 {
     cursor: pointer;
 }
@@ -299,26 +301,26 @@ small
     background-color: #0fac01;
 }
 
-#edit-day,
-#edit-night
+.edit-day,
+.edit-night
 {
     background-color: #c4c4c4;
 }
 
-#edit-day:hover,
-#edit-night:hover
+.edit-day:hover,
+.edit-night:hover
 {
     background-color: #6d6d6d;
 }
 
-#delete-day,
-#delete-night
+.delete-day,
+.delete-night
 {
     background-color: #f03a3a;
 }
 
-#delete-day:hover,
-#delete-night:hover
+.delete-day:hover,
+.delete-night:hover
 {
     background-color: #d31f1f;
 }
