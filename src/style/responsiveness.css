@@ -1,0 +1,39 @@
+@media screen and (max-width: 900px){
+
+    main 
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-table
+    {
+        margin: auto;
+        margin-top: 20px;
+        width: auto;
+    }
+
+    .profile-menu, 
+    .main-table
+    {
+        width: 90%;
+    }
+
+    ul
+    {
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .task-table
+    {
+        flex-direction: column;
+    }
+
+    .day-tasks,
+    .night-tasks
+    {
+        margin: 15px 15px 0px 0px;
+    }
+}
