@@ -6,9 +6,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="icon" href="/assets/todo.svg">
+	<link rel="icon" href="assets/todo.svg">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="page_style.css">
+	<link rel="stylesheet" href="src/style/general.css">
+	<link rel="stylesheet" href="src/style/profile.css">
+	<link rel="stylesheet" href="src/style/tasks_tables.css">
+	<link rel="stylesheet" href="src/style/inputs.css">
+	<link rel="stylesheet" href="src/style/buttons.css">
+	<link rel="stylesheet" href="src/style/responsiveness.css">
 	<title>Task List</title>
 </head>
 
@@ -58,54 +63,6 @@
 							<td>
 								<!-- Ordered list -->
 								<ol>
-									<li>
-										Andar de bike
-										<input type="checkbox" id="done" name="done" checked/>
-										<div class="button-cont">
-											<button class="edit-day" onclick="editTask(event)">
-												<i class="fa-solid fa-pen-to-square"></i>
-											</button>
-											<button class="delete-day" onclick="deleteTask(event)">
-												<i class="fa-solid fa-trash"></i>
-											</button>			
-										</div>
-									</li>
-									<li>
-										Pesquisar preços de PC
-										<input type="checkbox" id="done" name="done" checked/>
-										<div class="button-cont">
-											<button class="edit-day" onclick="editTask(event)">
-												<i class="fa-solid fa-pen-to-square"></i>
-											</button>
-											<button class="delete-day" onclick="deleteTask(event)">
-												<i class="fa-solid fa-trash"></i>
-											</button>			
-										</div>
-									</li>
-									<li>
-										Estudar para a prova
-										<input type="checkbox" id="done" name="done" checked/>
-										<div class="button-cont">
-											<button class="edit-day" onclick="editTask(event)">
-												<i class="fa-solid fa-pen-to-square"></i>
-											</button>
-											<button class="delete-day" onclick="deleteTask(event)">
-												<i class="fa-solid fa-trash"></i>
-											</button>			
-										</div>
-									</li>
-									<li>
-										Lorem ipsum is simply dummy text
-										<input type="checkbox" id="done" name="done"/>
-										<div class="button-cont">
-											<button class="edit-day" onclick="editTask(event)">
-												<i class="fa-solid fa-pen-to-square"></i>
-											</button>
-											<button class="delete-day" onclick="deleteTask(event)">
-												<i class="fa-solid fa-trash"></i>
-											</button>			
-										</div>
-									</li>
 								</ol>
 							</td>
 						</tr>
@@ -122,54 +79,6 @@
 						<tr>
 							<td>
 								<ol>
-									<li>
-										Estudar inglês
-										<input type="checkbox" id="done" name="done"/>
-										<div class="button-cont">
-											<button class="edit-night" onclick="editTask(event)">
-												<i class="fa-solid fa-pen-to-square"></i>
-											</button>
-											<button class="delete-night" onclick="deleteTask(event)">
-												<i class="fa-solid fa-trash"></i>
-											</button>			
-										</div>
-									</li>
-									<li>
-										Verificar emails
-										<input type="checkbox" id="done" name="done" checked/>
-										<div class="button-cont">
-											<button class="edit-night" onclick="editTask(event)">
-												<i class="fa-solid fa-pen-to-square"></i>
-											</button>
-											<button class="delete-night" onclick="deleteTask(event)">
-												<i class="fa-solid fa-trash"></i>
-											</button>			
-										</div>
-									</li>
-									<li>
-										Continuar a ler o livro
-										<input type="checkbox" id="done" name="done"/>
-										<div class="button-cont">
-											<button class="edit-night" onclick="editTask(event)">
-												<i class="fa-solid fa-pen-to-square"></i>
-											</button>
-											<button class="delete-night" onclick="deleteTask(event)">
-												<i class="fa-solid fa-trash"></i>
-											</button>			
-										</div>
-									</li>
-									<li>
-										Lorem ipsum is simply dummy text
-										<input type="checkbox" id="done" name="done"/>
-										<div class="button-cont">
-											<button class="edit-night" onclick="editTask(event)">
-												<i class="fa-solid fa-pen-to-square"></i>
-											</button>
-											<button class="delete-night" onclick="deleteTask(event)">
-												<i class="fa-solid fa-trash"></i>
-											</button>			
-										</div>
-									</li>
 								</ol>
 							</td>
 						</tr>		
@@ -207,6 +116,6 @@
 	</main>
 </body>
 
-<script src="crud.js"></script>
+<script src="src/js/crud.js"></script>
 <script src="https://kit.fontawesome.com/71a8ecb1b6.js" crossorigin="anonymous"></script>
 </html>

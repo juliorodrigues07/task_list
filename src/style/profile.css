@@ -1,0 +1,66 @@
+.profile-menu
+{
+    padding: 20px;
+    background-color: #58fdf5;
+    text-align: center;
+    height: auto;
+    width: 350px; 
+    border-radius: 10px;
+}
+
+img
+{
+    margin-top: 15px;
+    width: 150px;
+    border: solid 3px #000000;
+    border-radius: 70px;
+    background-color: #ffffff;
+}
+
+figure
+{
+    border-bottom: solid 3px #000000;
+}
+
+.resume
+{
+    margin-top: 15px;
+    font-size: 17px;
+    text-align: center;
+}
+
+
+.navigation-menu li 
+{
+    text-align: center;
+    padding: 10px;
+    list-style: none;
+}
+
+.navigation-menu a
+{
+    display: block;
+    padding: 5px;
+    font-size: 15px;
+    border: solid 2px #000000;
+    border-radius: 5px;
+    color: rgb(0, 110, 255);
+    background-color: rgb(255, 255, 255);
+}
+
+a
+{
+    text-decoration: none;
+}
+
+img:hover, a:hover
+{
+    cursor: pointer;
+    border-color: rgb(0, 110, 255);
+    background-color: #e4e4e4;
+}
+
+ul
+{
+    padding: 0;
+}
