@@ -5,6 +5,7 @@ function addTask()
 	const selectInput = document.getElementById('dropdown').value;
 
 	let validity = checkInputs(taskInput, taskName);
+	clearField();
 
 	if (validity)
 	{
@@ -18,24 +19,35 @@ function addTask()
 		// hence the first element (index = 0) has the desired HTML
 		let table = document.getElementsByClassName(selectedTable)[0];
 		let field = table.querySelector('ol');
-		
+
+		// Clean this with proper creation (createElement, add, onclick, appendChild, ...)
 		field.innerHTML += `<li>
 					${taskName}
+					<input type="checkbox" id="done" name="done"/>
 					<div class="button-cont">
-						<button id="edit-day" onclick="editTask()">
+						<button class="edit-day" onclick="editTask(event)">
 							<i class="fa-solid fa-pen-to-square"></i>
 						</button>
-						<button id="delete-day" onclick="deleteTask()">
+						<button class="delete-day" onclick="deleteTask(event)">
 							<i class="fa-solid fa-trash"></i>
-						</button>			
+						</button>
 					</div>
 				</li>`;
+
 		setOperationStatus(taskInput, 'Tarefa adicionada com sucesso!', 'success');
-	} 
-	else
-	{
-		setOperationStatus(taskInput, 'Houve um erro ao adicionar a tarefa!', 'error');
 	}
+}
+
+function deleteTask(event)
+{
+	var clickedButton = event.target;
+	var parentDiv = clickedButton.closest('.delete-day, .delete-night');
+	parentDiv.parentElement.parentElement.remove();
+}
+
+function clearField()
+{
+	document.getElementById('new-task').value = '';
 }
 
 function checkInputs(taskInput, value)
@@ -54,17 +66,17 @@ function checkInputs(taskInput, value)
 	return formIsValid;
 }
 
-function setErrorFor(field, message) 
+function setErrorFor(field, message)
 {
 	field.className = 'form-control error';
 	let formControl = field.parentElement.parentElement;
 	let small = formControl.querySelector('small');
-	
+
 	small.innerText = message;
 	small.parentElement.className = 'form-control error';
 }
 
-function setSuccessFor(field) 
+function setSuccessFor(field)
 {
 	field.className = 'form-control success';
 
@@ -75,7 +87,7 @@ function setSuccessFor(field)
 
 	setTimeout(function() {
 		field.className = 'form-control';
-	}, 2500);
+	}, 5000);
 }
 
 function setOperationStatus(field, message, status)
@@ -83,7 +95,7 @@ function setOperationStatus(field, message, status)
 	field.className = `form-control ${status}`;
 	let formControl = field.parentElement.parentElement;
 	let small = formControl.querySelector('small');
-	
+
 	small.innerText = message;
 	small.parentElement.className = `form-control ${status}`;
 
