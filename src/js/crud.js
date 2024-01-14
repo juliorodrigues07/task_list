@@ -1,13 +1,13 @@
 let dummyTasks = 
 [
-	{name: 'Andar de bike', period: 'Dia'},
-	{name: 'Pesquisar preços de PC', period: 'Dia'},
-	{name: 'Estudar para a prova', period: 'Dia'},
-	{name: 'Lorem ipsum is simply dummy text', period: 'Dia'},
-	{name: 'Estudar inglês', period: 'Noite'},
-	{name: 'Verificar emails', period: 'Noite'},
-	{name: 'Continuar a ler o livro', period: 'Noite'},
-	{name: 'Lorem ipsum is simply dummy text', period: 'Noite'}
+	{name: 'Andar de bike', period: 'Dia', status: true},
+	{name: 'Pesquisar preços de PC', period: 'Dia', status: true},
+	{name: 'Estudar para a prova', period: 'Dia', status: true},
+	{name: 'Lorem ipsum is simply dummy text', period: 'Dia', status: false},
+	{name: 'Estudar inglês', period: 'Noite', status: false},
+	{name: 'Verificar emails', period: 'Noite', status: true},
+	{name: 'Continuar a ler o livro', period: 'Noite', status: false},
+	{name: 'Lorem ipsum is simply dummy text', period: 'Noite', status: false}
 ];
 
 let tasks = dummyTasks;
@@ -53,11 +53,70 @@ function loadData()
 			period = 'night';
 		}
 
-		writeTask(period, table, task.name);
+		writeTask(period, table, task.name, task.status);
 	});
 }
 
-function writeTask(period, category, taskName)
+function hasParentWithClass(childElement, className) 
+{
+	let currentElement = childElement;
+
+	// Looking for a parent with a given class name
+	while (currentElement && currentElement !== document.body) 
+	{
+		if (currentElement.classList.contains(className)) 
+			return currentElement.className;
+
+		currentElement = currentElement.parentNode;
+	}
+
+	// If no parent with the specified class is found
+	return false;
+}
+
+function markTask(event)
+{
+	let status = String();
+	let checkButton = event.target;
+	let parentDiv = checkButton.closest('.open, .done');
+
+	if (parentDiv.className == 'done')
+	{
+		status = false;
+		parentDiv.className = 'open';
+		parentDiv.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+		parentDiv.parentElement.querySelector('span').className = 'unfin';
+	}
+	else
+	{
+		status = true;
+		parentDiv.className = 'done';
+		parentDiv.innerHTML = '<i class="fa-solid fa-check"></i>';
+		parentDiv.parentElement.querySelector('span').className = 'concluded';
+	}
+
+	let period = String();
+	let taskName = parentDiv.parentElement.querySelector('span').innerText;
+
+	let whichPeriod = hasParentWithClass(parentDiv, 'day-tasks');
+	if (!whichPeriod)
+		whichPeriod = hasParentWithClass(parentDiv, 'night-tasks');
+
+	if (String(whichPeriod).includes('day'))
+		period = 'Dia';
+	else
+		period = 'Noite';
+
+	// Updates task status on localStorage 
+	tasks.forEach(task => 
+	{
+		if (task.name === taskName.trim() && task.period === period)
+			task.status = status;
+	});
+	updateLocalStorage();
+}
+
+function writeTask(period, category, taskName, status=false)
 {
 	// Only one table has 'day-tasks' or 'night-tasks' as its class name,
 	// hence the first element (index = 0) has the desired HTML
@@ -67,18 +126,33 @@ function writeTask(period, category, taskName)
 	// Creates a new <li> element
 	let newListItem = document.createElement('li');
 
+	// Creates a new <span> element that contais the task name
 	let newSpan = document.createElement('span');
 	newSpan.textContent = taskName;
 
-	let checkbox = document.createElement('input');
-	checkbox.type = 'checkbox';
-	checkbox.id = 'done';
-	checkbox.name = 'done';
+	// Creates the checkbox button that marks the task status
+	let checkbox = document.createElement('button');
+	if (status)
+	{
+		newSpan.classList.add('concluded');
+		checkbox.classList.add('done');
+		checkbox.innerHTML = '<i class="fa-solid fa-check"></i>';
+	}	
+	else
+	{
+		newSpan.classList.add('unfin');
+		checkbox.classList.add('open');
+		checkbox.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+	}
+	checkbox.onclick = function(event) {
+		markTask(event);
+	};
 
 	// Create a new <div> for buttons
 	let newButtonDiv = document.createElement('div');
 	newButtonDiv.classList.add('button-cont');
 
+	// TODO: Include edit button later
 	let deleteButton = document.createElement('button');
 	deleteButton.classList.add(`delete-${period}`);
 	deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
@@ -131,6 +205,7 @@ function addTask()
 		setOperationStatus(taskInput, 'Tarefa adicionada com sucesso!', 'success');
 
 		// Adds the task to local storage
+		task.status = false;
 		tasks.push(task);
 		updateLocalStorage();
 	}

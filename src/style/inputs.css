@@ -6,13 +6,6 @@
     justify-content: center;
 }
 
-input[type='checkbox']
-{
-    cursor: crosshair;
-    width: 20px;
-    height: 20px;
-}
-
 input[type="text"]
 {
     padding: 10px;
@@ -94,7 +87,7 @@ small
 
 .form-control.success small 
 {
-    color: #00ff22;
+    color: #008b2a;
     visibility: visible;
 }
 
