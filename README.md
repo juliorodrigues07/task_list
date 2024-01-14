@@ -44,13 +44,13 @@ Neste caso, para visualizar e interagir com a página, basta abrir o arquivo _in
 - Para implementar a responsividade, basicamente apenas foi utilizado _Flexbox_, com orientação em linha para janelas com maior largura (monitores), e em coluna para janelas cuja largura seja menor que um limiar pré-definido (celulares);
 - Como na proposta da aplicação é improvável ter de lidar com dados sensíveis, a persistência de dados em ambiente de navegador foi implementada com _localStorage_, preservando todas as tarefas cadastradas em caso de recarregamento da página ou encerramento da sessão;
 - Para aprender como manipular _localStorage_ em JavaScript, utilizei de um vídeo curto no YouTube como fonte, disponível [neste link](https://www.youtube.com/watch?v=hNTozXl-qJA);
-- Vários elementos extras foram incluídos na página para aprimorar sua acessibilidade, entre eles estão ícones intuitivos para execução de ações, _feedbacks_ visuais e verbais na entrada de dados e responsividade ao ponteiro.
+- Vários elementos extras foram incluídos na página para aprimorar sua acessibilidade, entre eles estão ícones intuitivos para execução de ações, _feedbacks_ visuais e verbais na interação com diferentes elementos da página e entrada de dados.
 
 # Futuros Passos 
 
 - [ ] Adicionar funcionalidade de edição de tarefas;
 
-- [ ] Implementar persistência de dados para as _checkboxes_ (status da tarefa não persiste na página);
+- [x] Implementar persistência de dados para as _checkboxes_ (status da tarefa não persiste na página);
 
 - [x] Aprimorar alinhamento dos elementos;
 
@@ -58,4 +58,6 @@ Neste caso, para visualizar e interagir com a página, basta abrir o arquivo _in
 
 - [x] Refatorar funções responsáveis por alterações no DOM na adição e remoção de tarefas;
 
-- [ ] Analisar outras cores para elementos menores da página e aprimorar estilização.
+- [ ] Analisar outras cores para elementos menores da página e aprimorar estilização;
+
+- [ ] Considerar uso de _frameworks_ (React, Vue, Bootstrap, ...) para facilitar a implementação de novas funcionalidades e melhorias visuais.
