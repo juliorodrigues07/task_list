@@ -52,10 +52,10 @@ Neste caso, para visualizar e interagir com a página, basta abrir o arquivo _in
 
 - [ ] Implementar persistência de dados para as _checkboxes_ (status da tarefa não persiste na página);
 
-- [ ] Aprimorar alinhamento dos elementos;
+- [x] Aprimorar alinhamento dos elementos;
 
 - [ ] Correção de _bug_ na remoção de tarefas, pois múltiplas tarefas (mesmo nome e período) podem ser removidas em uma única operação, já que estas são filtradas apenas pelo nome e período;
 
-- [ ] Refatorar funções responsáveis por alterações no DOM na adição e remoção de tarefas;
+- [x] Refatorar funções responsáveis por alterações no DOM na adição e remoção de tarefas;
 
 - [ ] Analisar outras cores para elementos menores da página e aprimorar estilização.
