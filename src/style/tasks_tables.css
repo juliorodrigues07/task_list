@@ -46,18 +46,6 @@ th
 .night-tasks li
 {
     margin-top: 10px;
-    /* padding: 10px; */
-}
-
-.button-cont
-{
-    display: inline;
-}
-
-.button-cont button
-{
-    margin: 5px;
-    padding: 10px;
 }
 
 .day-tasks
@@ -77,4 +65,9 @@ th
 ol
 {
     margin-right: 20px;
+}
+
+span
+{
+    padding: 5px;
 }
