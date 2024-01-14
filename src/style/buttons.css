@@ -1,6 +1,6 @@
 .button-cont
 {
-    justify-content: center;
+    justify-content: end;
     display: flex;
 }
 
@@ -37,6 +37,36 @@
     background-color: #0fac01;
 }
 
+.open
+{
+    background-color: #e6e5e5;
+}
+
+.done
+{
+    background-color: #a550df;
+}
+
+.open:hover
+{
+    background-color: #a550df;
+}
+
+.done:hover
+{
+    background-color: #e6e5e5;
+
+}
+
+.open,
+.done
+{
+    transition: 0.5s;
+    cursor: crosshair;
+    border-radius: 5px;
+    border: solid 1px #000000;
+}
+
 /* .edit-day,
 .edit-night
 {
@@ -52,6 +82,7 @@
 .delete-day,
 .delete-night
 {
+    transition: 0.5s;
     background-color: #bdafaf;
 }
 
