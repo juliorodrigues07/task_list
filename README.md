@@ -61,3 +61,10 @@ Neste caso, para visualizar e interagir com a página, basta abrir o arquivo _in
 - [ ] Analisar outras cores para elementos menores da página e aprimorar estilização;
 
 - [ ] Considerar uso de _frameworks_ (React, Vue, Bootstrap, ...) para facilitar a implementação de novas funcionalidades e melhorias visuais.
+
+# Autor
+
+**Julio Rodrigues**
+<div>
+ <a href="https://www.linkedin.com/in/julio-rodrigues-267b63255/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+</div>
