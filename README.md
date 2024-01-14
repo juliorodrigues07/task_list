@@ -25,7 +25,7 @@ Nesta seção, encontram-se todas as instruções e alternativas para visualizar
 
 O _deploy_ do projeto foi realizado no GitHub Pages, logo para visualizar e interagir com a página hospedada, basta [clicar aqui](https://juliorodrigues07.github.io/task_list/).
 
-![Main Screen](/public/assets/page.png)
+![Main Screen](/assets/page.png)
 
 ## 2) Arquivo HTML
 
