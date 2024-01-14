@@ -1,11 +1,12 @@
 .profile-menu
 {
     padding: 20px;
-    background: linear-gradient(0deg, #58fdf5, #992ae4 100%);
     text-align: center;
     height: auto;
     width: 350px; 
+    background: linear-gradient(0deg, #58fdf5, #992ae4 100%);
     border-radius: 10px;
+    box-shadow: 0 0 15px 0 #1c1c1f;
 }
 
 img
@@ -47,6 +48,7 @@ figure
     border-radius: 5px;
     color: rgb(0, 110, 255);
     background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 3px 0 #1c1c1f;
 }
 
 a
