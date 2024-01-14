@@ -4,11 +4,9 @@ let dummyTasks =
 	{name: 'Pesquisar preços de PC', period: 'Dia'},
 	{name: 'Estudar para a prova', period: 'Dia'},
 	{name: 'Lorem ipsum is simply dummy text', period: 'Dia'},
-	{name: 'Lorem ipsum is simply dummy text', period: 'Dia'},
 	{name: 'Estudar inglês', period: 'Noite'},
 	{name: 'Verificar emails', period: 'Noite'},
 	{name: 'Continuar a ler o livro', period: 'Noite'},
-	{name: 'Lorem ipsum is simply dummy text', period: 'Noite'},
 	{name: 'Lorem ipsum is simply dummy text', period: 'Noite'}
 ];
 
@@ -30,7 +28,13 @@ const clearField = () =>
 	document.getElementById('new-task').value = '';
 };
 
+const focusField = () =>
+{
+	document.getElementById('new-task').focus();
+};
+
 loadData();
+focusField();
 
 function loadData()
 {
@@ -40,28 +44,54 @@ function loadData()
 		let table, period;
 		if (task.period === 'Dia')
 		{
-			table = document.getElementsByClassName('day-tasks')[0];
+			table = 'day-tasks';
 			period = 'day';
 		}
 		else
 		{
-			table = document.getElementsByClassName('night-tasks')[0];
+			table = 'night-tasks';
 			period = 'night';
 		}
 
-		let row = table.querySelector('ol');
-
-		// TODO: Clean this with proper creation (createElement, add, onclick, appendChild, ...)
-		row.innerHTML += `<li>
-					${task.name}
-					<input type="checkbox" id="done" name="done"/>
-					<div class="button-cont">
-						<button class="delete-${period}" onclick="deleteTask(event)">
-							<i class="fa-solid fa-trash"></i>
-						</button>
-					</div>
-				</li>`;
+		writeTask(period, table, task.name);
 	});
+}
+
+function writeTask(period, category, taskName)
+{
+	// Only one table has 'day-tasks' or 'night-tasks' as its class name,
+	// hence the first element (index = 0) has the desired HTML
+	let table = document.getElementsByClassName(category)[0];
+	let row = table.querySelector('ol');
+
+	// Creates a new <li> element
+	let newListItem = document.createElement('li');
+
+	let newSpan = document.createElement('span');
+	newSpan.textContent = taskName;
+
+	let checkbox = document.createElement('input');
+	checkbox.type = 'checkbox';
+	checkbox.id = 'done';
+	checkbox.name = 'done';
+
+	// Create a new <div> for buttons
+	let newButtonDiv = document.createElement('div');
+	newButtonDiv.classList.add('button-cont');
+
+	let deleteButton = document.createElement('button');
+	deleteButton.classList.add(`delete-${period}`);
+	deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
+	deleteButton.onclick = function(event) {
+		deleteTask(event);
+	};
+
+	// Appends the task to the table
+	newButtonDiv.appendChild(deleteButton);
+	newListItem.appendChild(checkbox);
+	newListItem.appendChild(newSpan);
+	newListItem.appendChild(newButtonDiv);
+	row.appendChild(newListItem);
 }
 
 function addTask()
@@ -76,6 +106,7 @@ function addTask()
 
 	if (validity)
 	{
+		let period;
 		let task = 
 		{
 			name: taskName
@@ -84,30 +115,19 @@ function addTask()
 		let selectedTable = String();
 		if (selectInput == 'day') 
 		{
+			period = 'day';
 			task.period = 'Dia';
 			selectedTable = 'day-tasks';
 		}
 		else
 		{
+			period = 'night';
 			task.period = 'Noite';
 			selectedTable = 'night-tasks';
 		}
 
-		// Only one table has 'day-tasks' or 'night-tasks' as its class name,
-		// hence the first element (index = 0) has the desired HTML
-		let table = document.getElementsByClassName(selectedTable)[0];
-		let row = table.querySelector('ol');
-
-		// Adds the task to the DOM, appending raw HTML
-		row.innerHTML += `<li>
-					${taskName}
-					<input type="checkbox" id="done" name="done"/>
-					<div class="button-cont">
-						<button class="delete-day" onclick="deleteTask(event)">
-							<i class="fa-solid fa-trash"></i>
-						</button>
-					</div>
-				</li>`;
+		// Adds the task to the DOM
+		writeTask(period, selectedTable, taskName);
 		setOperationStatus(taskInput, 'Tarefa adicionada com sucesso!', 'success');
 
 		// Adds the task to local storage
