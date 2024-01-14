@@ -1,3 +1,15 @@
+.button-cont
+{
+    justify-content: center;
+    display: flex;
+}
+
+.button-cont button
+{
+    margin: 5px;
+    padding: 10px;
+}
+
 #add-task,
 .delete-day,
 .delete-night
@@ -15,6 +27,8 @@
 
 #add-task
 {
+    font-size: 15px;
+    color: #ffffff;
     background-color: #15ff00;
 }
 
@@ -38,13 +52,13 @@
 .delete-day,
 .delete-night
 {
-    background-color: #f03a3a;
+    background-color: #bdafaf;
 }
 
 .delete-day:hover,
 .delete-night:hover
 {
-    background-color: #d31f1f;
+    background-color: #df3333;
 }
 
 /* FontAwesome Icons */
