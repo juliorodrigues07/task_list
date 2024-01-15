@@ -23,7 +23,7 @@ Nesta seção, encontram-se todas as instruções e alternativas para visualizar
 
 ## 1) URL
 
-O _deploy_ do projeto foi realizado no GitHub Pages, logo para visualizar e interagir com a página hospedada, basta [clicar aqui](https://juliorodrigues07.github.io/task_list/).
+O _deploy_ do projeto foi realizado no GitHub Pages, logo para visualizar e interagir com a página hospedada, basta [clicar aqui](https://juliorodrigues07.github.io/task_list/). O _layout_ contém informações fictícias.
 
 ![Main Screen](/public/assets/page.png)
 
@@ -48,15 +48,15 @@ Neste caso, para visualizar e interagir com a página, basta abrir o arquivo _in
 
 # Futuros Passos 
 
+- [ ] Correção de _bug_ na remoção de tarefas, pois múltiplas tarefas (mesmo nome e período) podem ser removidas em uma única operação, já que estas são filtradas apenas pelo nome e período;
+
 - [ ] Adicionar funcionalidade de edição de tarefas;
 
 - [x] Implementar persistência de dados para as _checkboxes_ (status da tarefa não persiste na página);
 
-- [x] Aprimorar alinhamento dos elementos;
-
-- [ ] Correção de _bug_ na remoção de tarefas, pois múltiplas tarefas (mesmo nome e período) podem ser removidas em uma única operação, já que estas são filtradas apenas pelo nome e período;
-
 - [x] Refatorar funções responsáveis por alterações no DOM na adição e remoção de tarefas;
+
+- [x] Aprimorar alinhamento dos elementos;
 
 - [ ] Analisar outras cores para elementos menores da página e aprimorar estilização;
 
