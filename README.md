@@ -9,9 +9,7 @@ Development of a custom and responsive layout of a dynamic task list (add and de
 
       sudo apt-get install npm
 
-- To install all dependencies according to each project, run the following command inside the project directory:
-
-      npm i
+- [Parcel](https://parceljs.org/) tool and [ESLint](https://eslint.org/) linter.
 
 # 2. Execution Options
 
@@ -31,13 +29,48 @@ In this case, to visualize and interact with the page, just open the _index.html
  
 ## 2.3. Locally
 
-- To execute the project locally as a server, run the following command inside the project's directory:
+To execute the project locally as a server, execute the following steps:
 
-      npm start
+1. Clone the repository
 
- You should receive an URL as output (`http://localhost:<port number>`). To visualize and interact with the page, just open the URL in a browser of your choice.
+       git clone https://github.com/juliorodrigues07/task_list.git
 
-# 3. Future Steps
+2. Unzip the repository
+
+       unzip task_list-master.zip && cd task_list-master
+
+3. Install the dependencies
+
+       npm i
+
+4. Run the project
+
+       npm start
+
+You should receive an URL as output (`http://localhost:<port number>`). To visualize and interact with the page, just open the URL in a browser of your choice.
+
+# 3. Project Structure
+
+    .
+    ├── README.md                      # Project's documentation
+    ├── public                         # Directory containing project's static files
+    |   ├── index.html                 <- Landing page base layout
+    |   └── assets                     # Directory containing all images and icons used in the page
+    |       ├── avatar.png
+    |       ├── page.png
+    |       └── todo.svg
+    └── src                            # Directory containing the application source code
+        ├── style                      # Directory containing all the page stylization
+        |   ├── buttons.css
+        |   ├── general.css
+        |   ├── inputs.css
+        |   ├── profile.css
+        |   ├── responsiveness.css     <- File that applies responsiveness to the layout
+        |   └── tasks_tables.css
+        └── js                         # Directory containing script responsible for page's dynamicity
+            └── crud.js                <- Add, deletion and marking functions with data persistence
+        
+# 4. Future Steps
 
 - [ ] Fix a bug in task deletion. Multiple tasks (same name and period) can be removed with a single operation, since these are filtered only by name and period;
 
