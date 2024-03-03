@@ -1,70 +1,54 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML) [![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-# Processo Seletivo da Aceleradora Ágil - Exercício 2
+# Responsive Task List
  
-Criação de um _layout_ personalizado e responsivo de uma lista de tarefas dinâmica, com funcionalidades de adição e remoção e persistência de dados a nível de navegador com [localStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage).
+Development of a custom and responsive layout of a dynamic task list (add and deletion functionalities), along with browser-level data persistence using [localStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage).
 
-# Requisitos (Opcional)
+# 1. Requirements
 
-- Gerenciador de pacotes para Node.JS [npm](https://docs.npmjs.com/):
+- Package manager for Node.JS [npm](https://docs.npmjs.com/):
 
       sudo apt-get install npm
 
-- Ferramenta [parcel](https://pt.parceljs.org/getting_started.html):
-
-      npm install -g parcel-bundler
-
-- Para instalar todas as dependências, execute o seguinte comando dentro do diretório do projeto:
+- To install all dependencies according to each project, run the following command inside the project directory:
 
       npm i
 
-# Opções de Execução
+# 2. Execution Options
 
-Nesta seção, encontram-se todas as instruções e alternativas para visualizar e interagir com o projeto em execução.
+ In this section, you'll find all the instructions to visualize and interact with the running project.
 
-## 1) URL
+## 2.1. URL
 
-O _deploy_ do projeto foi realizado no GitHub Pages, logo para visualizar e interagir com a página hospedada, basta [clicar aqui](https://juliorodrigues07.github.io/task_list/). O _layout_ contém informações fictícias.
+The project was deployed on GitHub Pages, therefore, to visualize and interact with the hosted page, just [click here](https://juliorodrigues07.github.io/task_list/).
+
+_Disclaimer: The layout contains fictitious informations._
 
 ![Main Screen](/public/assets/page.png)
 
-## 2) Arquivo HTML
+## 2.2. HTML File
 
-Neste caso, para visualizar e interagir com a página, basta abrir o arquivo _index.html_ em um navegador de sua preferência.
+In this case, to visualize and interact with the page, just open the _index.html_ file in a browser of your choice.
  
-## 3) Localmente
+## 2.3. Locally
 
-- Para executar a página localmente como um servidor, execute o seguinte comando dentro do diretório do projeto:
+- To execute the project locally as a server, run the following command inside the project's directory:
 
       npm start
 
- Você deve receber uma _URL_ como saída (`http://localhost:<número da porta>`). Para visualizar e interagir com a página, apenas abra a _URL_ em um navegador de sua preferência.
+ You should receive an URL as output (`http://localhost:<port number>`). To visualize and interact with the page, just open the URL in a browser of your choice.
 
-# Considerações Sobre a Solução
+# 3. Future Steps
 
-- Para implementar a responsividade, basicamente apenas foi utilizado _Flexbox_, com orientação em linha para janelas com maior largura (monitores), e em coluna para janelas cuja largura seja menor que um limiar pré-definido (celulares);
-- Como na proposta da aplicação é improvável ter de lidar com dados sensíveis, a persistência de dados em ambiente de navegador foi implementada com _localStorage_, preservando todas as tarefas cadastradas em caso de recarregamento da página ou encerramento da sessão;
-- Para aprender como manipular _localStorage_ em JavaScript, utilizei de um vídeo curto no YouTube como fonte, disponível [neste link](https://www.youtube.com/watch?v=hNTozXl-qJA);
-- Vários elementos extras foram incluídos na página para aprimorar sua acessibilidade, entre eles estão ícones intuitivos para execução de ações, _feedbacks_ visuais e verbais na interação com diferentes elementos da página e entrada de dados.
+- [ ] Fix a bug in task deletion. Multiple tasks (same name and period) can be removed with a single operation, since these are filtered only by name and period;
 
-# Futuros Passos 
+- [ ] Add task editing funcionality;
 
-- [ ] Correção de _bug_ na remoção de tarefas, pois múltiplas tarefas (mesmo nome e período) podem ser removidas em uma única operação, já que estas são filtradas apenas pelo nome e período;
+- [x] Implement data persistence for the _checkboxes_ (task statuses doesn't persist on page);
 
-- [ ] Adicionar funcionalidade de edição de tarefas;
+- [x] Refactor functions responsible for DOM modifications on adding and removing tasks;
 
-- [x] Implementar persistência de dados para as _checkboxes_ (status da tarefa não persiste na página);
+- [x] Enhance elements alignment;
 
-- [x] Refatorar funções responsáveis por alterações no DOM na adição e remoção de tarefas;
+- [ ] Analyze other colors for smaller page elements and improve stylization;
 
-- [x] Aprimorar alinhamento dos elementos;
-
-- [ ] Analisar outras cores para elementos menores da página e aprimorar estilização;
-
-- [ ] Considerar uso de _frameworks_ (React, Vue, Bootstrap, ...) para facilitar a implementação de novas funcionalidades e melhorias visuais.
-
-# Autor
-
-**Julio Rodrigues**
-<div>
- <a href="https://www.linkedin.com/in/julio-rodrigues-267b63255/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
-</div>
+- [ ] Consider using _frameworks_ (React, Vue, Bootstrap, ...) to facilitate the implementation of new features and visual enhancements.
