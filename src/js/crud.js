@@ -1,13 +1,13 @@
 let dummyTasks = 
 [
-	{name: 'Andar de bike', period: 'Dia', status: true},
-	{name: 'Pesquisar preços de PC', period: 'Dia', status: true},
-	{name: 'Estudar para a prova', period: 'Dia', status: true},
-	{name: 'Lorem ipsum is simply dummy text', period: 'Dia', status: false},
-	{name: 'Estudar inglês', period: 'Noite', status: false},
-	{name: 'Verificar emails', period: 'Noite', status: true},
-	{name: 'Continuar a ler o livro', period: 'Noite', status: false},
-	{name: 'Lorem ipsum is simply dummy text', period: 'Noite', status: false}
+	{name: 'Bike riding', period: 'Day', status: true},
+	{name: 'Search laptop prices', period: 'Day', status: true},
+	{name: 'Study for the exam', period: 'Day', status: true},
+	{name: 'Lorem ipsum is simply dummy text', period: 'Day', status: false},
+	{name: 'Study english', period: 'Night', status: false},
+	{name: 'Check emails', period: 'Night', status: true},
+	{name: 'Continue reading the book', period: 'Night', status: false},
+	{name: 'Lorem ipsum is simply dummy text', period: 'Night', status: false}
 ];
 
 let tasks = dummyTasks;
@@ -42,7 +42,7 @@ function loadData()
 	tasks.forEach(task => {
 
 		let table, period;
-		if (task.period === 'Dia')
+		if (task.period === 'Day')
 		{
 			table = 'day-tasks';
 			period = 'day';
@@ -103,9 +103,9 @@ function markTask(event)
 		whichPeriod = hasParentWithClass(parentDiv, 'night-tasks');
 
 	if (String(whichPeriod).includes('day'))
-		period = 'Dia';
+		period = 'Day';
 	else
-		period = 'Noite';
+		period = 'Night';
 
 	// Updates task status on localStorage 
 	tasks.forEach(task => 
@@ -190,13 +190,13 @@ function addTask()
 		if (selectInput == 'day') 
 		{
 			period = 'day';
-			task.period = 'Dia';
+			task.period = 'Day';
 			selectedTable = 'day-tasks';
 		}
 		else
 		{
 			period = 'night';
-			task.period = 'Noite';
+			task.period = 'Night';
 			selectedTable = 'night-tasks';
 		}
 
@@ -222,9 +222,9 @@ function deleteTask(event)
 	let button = parentDiv.parentElement.querySelector('button');
 	
 	if (String(button.className).includes('day'))
-		period = 'Dia';
+		period = 'Day';
 	else
-		period = 'Noite';
+		period = 'Night';
 
 	// Uses a filter to remove tasks that have the same name and period on local storage
 	tasks = tasks.filter(task => task.name !== taskName.trim() || task.period !== period);
