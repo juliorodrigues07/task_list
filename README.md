@@ -71,10 +71,10 @@ You should receive an URL as output (`http://localhost:<port number>`). To visua
             └── crud.js                <- Add, deletion and marking functions with data persistence
         
 # 4. Future Steps
-
+      
 - [ ] Fix a bug in task deletion. Multiple tasks (same name and period) can be removed with a single operation, since these are filtered only by name and period;
 
-- [ ] Add task editing funcionality;
+- [ ] Add edit functionality to profile photo, short-bio, social media and tasks;
 
 - [x] Implement data persistence for the _checkboxes_ (task statuses doesn't persist on page);
 
