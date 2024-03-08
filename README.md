@@ -35,9 +35,9 @@ To execute the project locally as a server, execute the following steps:
 
        git clone https://github.com/juliorodrigues07/task_list.git
 
-2. Unzip the repository
+2. Enter the repository directory
 
-       unzip task_list-master.zip && cd task_list-master
+       cd task_list
 
 3. Install the dependencies
 
