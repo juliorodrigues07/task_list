@@ -9,9 +9,7 @@ Development of a custom and responsive layout of a dynamic task list (add and de
 
       sudo apt-get install npm
 
-- To install all dependencies according to each project, run the following command inside the project directory:
-
-      npm i
+- [Parcel](https://parceljs.org/) tool and [ESLint](https://eslint.org/) linter.
 
 # 2. Execution Options
 
@@ -27,11 +25,25 @@ In this case, to visualize and interact with the page, just open the _index.html
  
 ## 2.2. Locally
 
-- To execute the project locally as a server, run the following command inside the project's directory:
+To execute the project locally as a server, execute the following steps:
 
-      npm start
+1. Clone the repository
 
- You should receive an URL as output (`http://localhost:<port number>`). To visualize and interact with the page, just open the URL in a browser of your choice.
+       git clone -b data_persistence https://github.com/juliorodrigues07/task_list.git
+
+2. Enter the repository directory
+
+       cd task_list
+
+3. Install the dependencies
+
+       npm i
+
+4. Run the project
+
+       npm start
+
+You should receive an URL as output (`http://localhost:<port number>`). To visualize and interact with the page, just open the URL in a browser of your choice.
 
 # 3. Future Steps
 
